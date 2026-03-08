@@ -107,5 +107,15 @@ namespace WindowsFormsApp3
                 UseShellExecute = true
             });
         }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+        }
     }
 }
