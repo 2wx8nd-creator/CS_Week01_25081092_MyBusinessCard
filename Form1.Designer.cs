@@ -105,6 +105,8 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "학번 : 25081092\r\n영미언어문화 전공\r\n캄퓨터SW 복수전공\r\n\r\n10년 후 자신의 결혼 및 마이하우스 장만을 위해 나름 열심히 사는 중입니" +
     "다.\r\n\r\n증명사진의 스캔본이 없어 대신 귀여운 햄스터의 이미지를 삽입했습니다.\r\n";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
             // 
             // panel6
             // 
@@ -127,6 +129,7 @@
             this.textBox2.Size = new System.Drawing.Size(200, 42);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "민승호";
+            this.textBox2.MouseEnter += new System.EventHandler(this.textBox2_MouseEnter);
             // 
             // panel3
             // 

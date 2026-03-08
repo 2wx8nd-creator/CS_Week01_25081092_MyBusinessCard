@@ -117,5 +117,20 @@ namespace WindowsFormsApp3
         {
             pictureBox1.BorderStyle = BorderStyle.Fixed3D;
         }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_MouseEnter(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
+
+        private void textBox2_MouseEnter(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
+        }
     }
 }
