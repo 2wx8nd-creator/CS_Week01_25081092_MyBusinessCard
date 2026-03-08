@@ -12,6 +12,16 @@ namespace WindowsFormsApp3
 {
     public partial class 힘들어요 : Form
     {
+        Color[] myColors = new Color[] {
+            Color.FromArgb(156, 175, 136),
+            Color.FromArgb(25, 42, 81),
+            Color.FromArgb(210, 201, 175),
+            Color.FromArgb(170, 160, 145),
+            Color.FromArgb(10, 68, 152)
+        };
+
+        int currentColorIndex = 0;
+
         private List<Image> imageList = new List<Image>();
         private int currentIndex = 0;
 
@@ -22,7 +32,8 @@ namespace WindowsFormsApp3
             ShowImage();
         }
 
-        // [추가됨] 3. 실제 이미지 파일들을 불러오는 함수 (경로 설정 필요)
+
+        
         private void LoadImages()
         {
             imageList.Add(Properties.Resources.photo1);
@@ -80,6 +91,21 @@ namespace WindowsFormsApp3
             }
 
             ShowImage();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            currentColorIndex = (currentColorIndex + 1) % myColors.Length;
+            this.BackColor = myColors[currentColorIndex];
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = "https://github.com/2wx8nd-creator",
+                UseShellExecute = true
+            });
         }
     }
 }
